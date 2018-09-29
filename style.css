@@ -1,25 +1,29 @@
 body {
-  background-color: #0e0e33;
-  font-family: 'Roboto Mono';
-  color: #FFF3E5;
+  background-color: #252B32;
+  font-family: 'Ubuntu Mono';
+  color: #EDFAFD;
 }
 
 #sections {
-  padding: 20px;
+  padding-left: 30px;
+  padding-top: 30px;
+  width: 160px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  display: inline-block;
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
 }
 
 #sections a {
-  color: #FFF3E5;
+  color: #EDFAFD;
   text-decoration: none;
-  font-size: 1em;
 }
 
 #sections a:hover {
-  color: #DBC7B0;
-}
-
-#sections a:active {
-  color: #DBC7B0;
+  color: #7EBADA;
 }
 
 #sections button {
@@ -33,11 +37,11 @@ body {
 }
 
 #sections button:hover {
-  color: #DBC7B0;
+  color: #7EBADA;
 }
 
 #sections button:focus {
-  color: #DBC7B0;
+  color: #7EBADA;
 }
 
 .tabcontent {
@@ -46,19 +50,26 @@ body {
 }
 
 #home {
+  padding-top: 50px;
   text-align: center;
+  width: 50%;
+  transform: translate(50%, 0);
 }
 
 #home img {
-  width: 19%;
-  border: 5px solid #FFF3E5;
+  width: 38%;
+  border: 5px solid #EDFAFD;
   border-radius: 50%;
+}
+
+#me {
+  display: inline;
 }
 
 .typewriter h1 {
   width: fit-content;
   overflow: hidden;
-  border-right: .15em solid #DBC7B0;
+  border-right: 5px solid #7EBADA;
   white-space: nowrap;
   margin: 0 auto;
   animation:
@@ -69,15 +80,17 @@ body {
 /* The typing effect 292C33*/
 @keyframes typing {
   from { width: 0 }
-  to { width: 18% } /* TODO: Fix this shit */
+  to { width: 38% } /* TODO: Fix this shit */
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #DBC7B0; }
+  50% { border-color: #7EBADA; }
 }
 
-embed {
-  float: center;
+#resume {
+  margin-left: 200px;
+  padding: 20px 20px 20px 20px;
+  display: inline;
 }
