@@ -1,6 +1,6 @@
 body {
-  background-color: #292C33;
-  font-family: "Courier";
+  background-color: #0e0e33;
+  font-family: 'Roboto Mono';
   color: #FFF3E5;
 }
 
@@ -15,32 +15,69 @@ body {
 }
 
 #sections a:hover {
-  color: #E5B57B;
+  color: #DBC7B0;
 }
 
-#profile {
+#sections a:active {
+  color: #DBC7B0;
+}
+
+#sections button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+#sections button:hover {
+  color: #DBC7B0;
+}
+
+#sections button:focus {
+  color: #DBC7B0;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+}
+
+#home {
   text-align: center;
 }
 
-#profile h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #E5B57B; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+#home img {
+  width: 19%;
+  border: 5px solid #FFF3E5;
+  border-radius: 50%;
+}
+
+.typewriter h1 {
+  width: fit-content;
+  overflow: hidden;
+  border-right: .15em solid #DBC7B0;
+  white-space: nowrap;
+  margin: 0 auto;
   animation:
-    typing 3.5s steps(40, end),
+    typing 1s steps(12, end),
     blink-caret .75s step-end infinite;
 }
 
-/* The typing effect */
+/* The typing effect 292C33*/
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 18% } /* TODO: Fix this shit */
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #E5B57B; }
+  50% { border-color: #DBC7B0; }
+}
+
+embed {
+  float: center;
 }

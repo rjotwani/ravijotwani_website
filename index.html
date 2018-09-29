@@ -4,21 +4,55 @@
   <head>
     <title>Ravi Jotwani</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300" rel="stylesheet">
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      window.onload = function() {
+        document.getElementById("defaultOpen").click();
+        document.getElementById("defaultOpen").focus();
+      };
+    </script>
   </head>
 
   <body>
 
     <div id="sections">
-      <a href="#">// Home</a><br/>
-      <a href="#portfolio">// Portfolio</a><br/>
+      <button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">// Home</button><br/>
+      <button class="tablinks" onclick="openTab(event, 'portfolio')">// Portfolio</button><br/>
       <a href="mailto:rjotwani@berkeley.edu">// Email</a><br/>
       <a href="https://github.com/rjotwani" target="_blank">// GitHub</a><br/>
       <a href="https://www.linkedin.com/in/ravijotwani/" target="_blank">// LinkedIn</a><br/>
-      <a href="#edit" target="_blank">// Resume</a>
+      <a href="./downloads/resume.pdf" target="_blank">// Resume</a>
     </div>
 
-    <div id="profile">
-      <h1>Hi, I'm Ravi.</h1>
+    <br/>
+
+    <div id="home" class="tabcontent">
+      <img src="./images/me.jpg" />
+      <br/><br/><br/><br/>
+      <div class="typewriter">
+        <h1>Hi, I'm Ravi.</h1>
+      </div>
+    </div>
+
+    <div id="portfolio" class="tabcontent">
+      hello1
     </div>
 
   </body>
