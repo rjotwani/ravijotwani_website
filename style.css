@@ -1,6 +1,6 @@
 body {
   background-color: #252B32;
-  font-family: 'Ubuntu Mono';
+  font-family: 'Inconsolata';
   color: #EDFAFD;
 }
 
@@ -64,6 +64,15 @@ body {
 
 #me {
   display: inline;
+}
+
+#bio {
+  text-align: left;
+  font-family: 'Inconsolata';
+  font-size: 1.1em;
+  width: 50%;
+  transform: translate(50%, 0);
+  line-height: 1.4em;
 }
 
 .typewriter h1 {
