@@ -1,66 +1,91 @@
-# (WIP) Future Imperfect - Jekyll Theme
+<p align="center">
+  <a href="http://materializecss.com/">
+    <img src="http://materializecss.com/res/materialize.svg" width="150">
+  </a>
+</p>
 
-A Jekyll version of the "Future Imperfect" theme by [HTML5 UP](https://html5up.net/).
+<h3 align="center">MaterializeCSS</h3>
 
-![Future Imperfect Theme](images/future-imperfect.jpg "Future Imperfect Theme")
+<p align="center">
+  Materialize, a CSS Framework based on material design.
+  <br>
+  <a href="http://materializecss.com/"><strong>-- Browse the docs --</strong></a>
+  <br>
+  <br>
+  <a href="https://travis-ci.org/Dogfalo/materialize">
+    <img src="https://travis-ci.org/Dogfalo/materialize.svg?branch=master" alt="Travis CI badge">
+  </a>
+  <a href="https://badge.fury.io/js/materialize-css">
+    <img src="https://badge.fury.io/js/materialize-css.svg" alt="npm version badge">
+  </a>
+  <a href="https://cdnjs.com/libraries/materialize">
+    <img src="https://img.shields.io/cdnjs/v/materialize.svg" alt="CDNJS version badge">
+  </a>
+  <a href="https://david-dm.org/Dogfalo/materialize">
+    <img src="https://david-dm.org/Dogfalo/materialize/status.svg" alt="dependencies Status badge">
+    </a>
+  <a href="https://david-dm.org/Dogfalo/materialize#info=devDependencies">
+    <img src="https://david-dm.org/Dogfalo/materialize/dev-status.svg" alt="devDependency Status badge">
+  </a>
+  <a href="https://gitter.im/Dogfalo/materialize">
+    <img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter badge">
+  </a>
+</p>
 
-# How to Use
+## Table of Contents
+- [Quickstart](#quickstart)
+- [Documentation](#documentation)
+- [Supported Browsers](#supported-browsers)
+- [Changelog](#changelog)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [Copyright and license](#copyright-and-license)
 
-For those unfamiliar with how Jekyll works, check out [https://jekyllrb.com/](https://jekyllrb.com/) for all the details, 
-or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/), 
-and [creating pages](https://jekyllrb.com/docs/pages/).
+## Quickstart:
+Read the [getting started guide](http://materializecss.com/getting-started.html) for more information on how to use materialize.
 
-- **GitLab**: Simply fork this repository and start editing the `_config.yml` file!  
-- **GitHub**: Fork this reposity and create a branch named `gh-pages`, then start editing the `_config.yml` file!
+- [Download the latest release](https://github.com/Dogfalo/materialize/releases/latest) of materialize directly from GitHub. ([Beta](https://github.com/Dogfalo/materialize/releases/))
+- Clone the repo: `git clone https://github.com/Dogfalo/materialize.git` (Beta: `git clone -b v1-dev https://github.com/Dogfalo/materialize.git`)
+- Include the files via [cdnjs](https://cdnjs.com/libraries/materialize). More [here](http://materializecss.com/getting-started.html). ([Beta](https://cdnjs.com/libraries/materialize/1.0.0-beta))
+- Install with [npm](https://www.npmjs.com): `npm install materialize-css` (Beta: `npm install materialize-css@next`)
+- Install with [Bower](https://bower.io): `bower install materialize` ([DEPRECATED](https://bower.io/blog/2017/how-to-migrate-away-from-bower/))
+- Install with [Atmosphere](https://atmospherejs.com): `meteor add materialize:materialize` (Beta: `meteor add materialize:materialize@=1.0.0-beta`)
 
-# Issues
+## Documentation
+The documentation can be found at <http://materializecss.com>. To run the documentation locally on your machine, you need [Node.js](https://nodejs.org/en/) installed on your computer.
 
-If you would like to report a bug, ask a question, request a feature, feel free to do so on [the GitLab repository](https://gitlab.com/andrewbanchich/future-imperfect-jekyll-theme) and I will be more than happy to help!
+### Running documentation locally
+Run these commands to set up the documentation:
 
-Alternatively, you can open an issue via email by emailing [incoming+andrewbanchich/future-imperfect-jekyll-theme@incoming.gitlab.com](mailto:incoming+andrewbanchich/future-imperfect-jekyll-theme@incoming.gitlab.com).
-
-The GitHub repository is simply a mirror of the GitLab repository.
-
-# Credits
-
-Original README from HTML5 UP:
-
+```bash
+git clone https://github.com/Dogfalo/materialize
+cd materialize
+npm install
 ```
-Future Imperfect by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
+Then run `grunt monitor` to compile the documentation. When it finishes, open a new browser window and navigate to `localhost:8000`. We use [BrowserSync](https://www.browsersync.io/) to display the documentation.
 
-It's been a long time coming, but I've finally gotten around to creating a brand new
-blog-style template (and the first since Striped, which came out waaaaay back in 2013).
-Anyway, Future Imperfect features a clean, expansive layout, a toggleable search box,
-and -- because pretty much all modern browsers can use it now -- a whole lot of flexbox
-action. Enjoy it :)
+### Documentation for previous releases
+Previous releases and their documentation are available for [download](https://github.com/Dogfalo/materialize/releases).
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+## Supported Browsers:
+Materialize is compatible with:
 
-(* = not included)
+- Chrome 35+
+- Firefox 31+
+- Safari 9+
+- Opera
+- Edge
+- IE 11+
 
-AJ
-aj@lkn.io | @ajlkn
+## Changelog
+For changelogs, check out [the Releases section of materialize](https://github.com/Dogfalo/materialize/releases) or the [CHANGELOG.md](CHANGELOG.md).
 
+## Testing
+We use Jasmine as our testing framework and we're trying to write a robust test suite for our components. If you want to help, [here's a starting guide on how to write tests in Jasmine](CONTRIBUTING.md#jasmine-testing-guide).
 
-Credits:
+## Contributing
+Check out the [CONTRIBUTING document](CONTRIBUTING.md) in the root of the repository to learn how you can contribute. You can also browse the [help-wanted](https://github.com/Dogfalo/materialize/labels/help-wanted) tag in our issue tracker to find things to do.
 
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		Misc. Sass functions (@HugoGiraudel)
-		Respond.js (j.mp/respondjs)
-		Skel (skel.io)
-
-```
-
-Repository [Jekyll logo](https://github.com/jekyll/brand) icon licensed under a [Creative Commons Attribution 4.0 International License](http://choosealicense.com/licenses/cc-by-4.0/).
+## Copyright and license
+Code Copyright 2018 Materialize. Code released under the MIT license.
