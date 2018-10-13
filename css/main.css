@@ -1,54 +1,55 @@
+body {
+    margin: 0px;
+}
+
 #sections {
     height: 100%;
-    width: 200px;
+    width: 225px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #eee;
     overflow-x: hidden;
     padding-top: 20px;
 }
 
 #sections button {
     padding: 6px 0px 6px 32px;
-    width: 100%;
+    width: 200px;
     text-align: left;
     text-decoration: none;
     font-size: 25px;
-    color: #2196F3;
+    color: #0091EA;
     display: block;
-    background-color: #eee;
     border: none;
+    font-family: "Rubik", sans-serif;
 }
 
 #sections button:hover {
-    color: #064579;
+    color: #01579B;
     background-color: #ddd;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 #sections button:focus {
     outline: 0;
-    color: #000;
-    background-color: lightblue;
+    color: #01579B;
+    background-color: #B3E5FC;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 }
 
 #main {
-    margin-left: 200px;
-    padding: 0px 10px;
+    margin-left: 225px;
+}
+
+#resume {
+    margin: 0px;
+    padding: 0px;
 }
 
 @media screen and (max-height: 450px) {
     #sections {padding-top: 15px;}
     #sections button {font-size: 18px;}
-}
-
-.tabcontent {
-    margin-left: 200px;
-}
-
-#resume embed {
-    padding: 0px;
 }

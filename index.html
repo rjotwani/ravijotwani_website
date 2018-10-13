@@ -3,19 +3,42 @@
 
   <head>
     <title>Ravi Jotwani</title>
-    <link href="./main.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
   <body>
 
     <div id="sections">
-      <button>Home</button>
-      <button>Portfolio</button>
-      <button>Links</button>
-      <button>Resume</button>
+      <button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">
+        Home
+        <div class="ripple--container">
+          <span style="top: 5px; left: 20px;"></span>
+          <span style="top: 5px; left: 20px;"></span>
+          <span style="top: 5px; left: 20px;"></span>
+          <span style="top: 5px; left: 20px;"></span>
+        </div>
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'portfolio')">
+        Portfolio
+        <div class="ripple--container">
+          <span style="top: 5px; left: 20px;"></span>
+          <span style="top: 5px; left: 20px;"></span>
+          <span style="top: 5px; left: 20px;"></span>
+          <span style="top: 5px; left: 20px;"></span>
+        </div>
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'resume')">
+        Resume
+        <div class="ripple--container">
+          <span style="top: 5px; left: 20px;"></span>
+          <span style="top: 5px; left: 20px;"></span>
+          <span style="top: 5px; left: 20px;"></span>
+          <span style="top: 5px; left: 20px;"></span>
+        </div>
+      </button>
+      <!-- INSERT LINKS HERE (Email, Github, Linkedin, Medium) -->
     </div>
 
     <div id="main">
@@ -46,10 +69,14 @@
       </div>
 
       <div id="resume" class="tabcontent">
-        <embed src="files/resume.pdf" type="application/pdf" width="100%" />
+        <embed id="embeddedFile" src="./files/resume.pdf" type="application/pdf" width="100%" />
       </div>
 
     </div>
+
+    <script src="./js/tabs.js"></script>
+    <script src="./js/ripples.js"></script>
+    <script src="./js/resume.js"></script>
 
   </body>
 
