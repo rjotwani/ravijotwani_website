@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    background-color: #F7F7F7
 }
 
 #sections {
@@ -11,37 +12,79 @@ body {
     left: 0;
     overflow-x: hidden;
     padding-top: 20px;
+    background-color: #E5EEFB;
+    -webkit-box-shadow: 0 0px 10px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 0px 10px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 0px 10px rgba(57, 63, 72, 0.3);
 }
 
 #sections button {
+  background-color: inherit;
     padding: 6px 0px 6px 32px;
     width: 200px;
     text-align: left;
     text-decoration: none;
     font-size: 25px;
-    color: #0091EA;
+    color: #034488;
     display: block;
     border: none;
     font-family: "Rubik", sans-serif;
+
+    box-shadow: inset 0 0 0 0 #FFF;
+    -webkit-transition: ease-out 0.2s;
+    -moz-transition: ease-out 0.2s;
+    transition: ease-out 0.2s;
 }
 
-#sections button:hover {
-    color: #01579B;
-    background-color: #ddd;
+#sections button:hover:not(:focus) {
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+    box-shadow: inset 200px 0 0 0 #FFF;
 }
 
 #sections button:focus {
     outline: 0;
-    color: #01579B;
-    background-color: #B3E5FC;
+    color: #F7F7F7;
+    background-color: #034488;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 }
 
 #main {
     margin-left: 225px;
+}
+
+#home {
+    padding: 50px 300px 50px 300px;
+}
+
+#me {
+    text-align: center;
+}
+
+#me img {
+    width: 50%;
+    border: 5px solid #034488;
+    border-radius: 50%;
+}
+
+#typewriter {
+    width: fit-content;
+    color: #034488;
+    font-size: 48px;
+    font-family: "Inconsolata";
+    border-right: 5px solid #BBD7FF;
+    animation: blink-caret .75s step-end infinite;
+}
+
+#bio {
+    font-family: "Rubik";
+    color: #111;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #BBD7FF; }
 }
 
 #resume {

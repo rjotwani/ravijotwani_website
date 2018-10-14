@@ -5,39 +5,16 @@
     <title>Ravi Jotwani</title>
     <link href="./css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
   <body>
 
     <div id="sections">
-      <button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">
-        Home
-        <div class="ripple--container">
-          <span style="top: 5px; left: 20px;"></span>
-          <span style="top: 5px; left: 20px;"></span>
-          <span style="top: 5px; left: 20px;"></span>
-          <span style="top: 5px; left: 20px;"></span>
-        </div>
-      </button>
-      <button class="tablinks" onclick="openTab(event, 'portfolio')">
-        Portfolio
-        <div class="ripple--container">
-          <span style="top: 5px; left: 20px;"></span>
-          <span style="top: 5px; left: 20px;"></span>
-          <span style="top: 5px; left: 20px;"></span>
-          <span style="top: 5px; left: 20px;"></span>
-        </div>
-      </button>
-      <button class="tablinks" onclick="openTab(event, 'resume')">
-        Resume
-        <div class="ripple--container">
-          <span style="top: 5px; left: 20px;"></span>
-          <span style="top: 5px; left: 20px;"></span>
-          <span style="top: 5px; left: 20px;"></span>
-          <span style="top: 5px; left: 20px;"></span>
-        </div>
-      </button>
+      <button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">Home</button>
+      <button class="tablinks" onclick="openTab(event, 'portfolio')">Portfolio</button>
+      <button class="tablinks" onclick="openTab(event, 'resume')">Resume</button>
       <!-- INSERT LINKS HERE (Email, Github, Linkedin, Medium) -->
     </div>
 
@@ -47,10 +24,7 @@
         <div id="me">
           <img src="./images/me.jpg" />
         </div>
-        <br/><br/><br/><br/>
-        <div class="typewriter">
-          <h1>Hi, I'm Ravi.</h1>
-        </div>
+        <h1 id="typewriter"></h1>
         <p id="bio">
           I'm a 19-year-old Computer Science student at UC Berkeley.
           As a full-stack developer, I've created multiple cool projects
@@ -59,7 +33,7 @@
       </div>
 
       <div id="portfolio" class="tabcontent">
-        hello1
+        
       </div>
 
       <div id="links" class="tabcontent">
@@ -75,8 +49,7 @@
     </div>
 
     <script src="./js/tabs.js"></script>
-    <script src="./js/ripples.js"></script>
-    <script src="./js/resume.js"></script>
+    <script src="./js/content.js"></script>
 
   </body>
 
