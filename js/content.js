@@ -4,7 +4,7 @@
 
  var i = 0;
  var txt = "Hi, I'm Ravi.";
- var speed = 75;
+ var speed = 78;
 
  function typeWriter() {
    if (i < txt.length) {

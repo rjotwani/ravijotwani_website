@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    background-color: #F7F7F7
+    background-color: #FEFEFE
 }
 
 #sections {
@@ -11,11 +11,11 @@ body {
     top: 0;
     left: 0;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 40px;
     background-color: #E5EEFB;
-    -webkit-box-shadow: 0 0px 10px rgba(57, 63, 72, 0.3);
-    -moz-box-shadow: 0 0px 10px rgba(57, 63, 72, 0.3);
-    box-shadow: 0 0px 10px rgba(57, 63, 72, 0.3);
+    -webkit-box-shadow: 0 0px 20px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 0px 20px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 0px 20px rgba(57, 63, 72, 0.3);
 }
 
 #sections button {
@@ -24,7 +24,7 @@ body {
     width: 200px;
     text-align: left;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #034488;
     display: block;
     border: none;
@@ -44,14 +44,14 @@ body {
 
 #sections button:focus {
     outline: 0;
-    color: #F7F7F7;
+    color: #FEFEFE;
     background-color: #034488;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 }
 
 #links {
-    padding-top: 30px;
+    padding-top: 40px;
     color: #034488;
     text-align: center;
     font-size: 40px;
@@ -82,7 +82,7 @@ body {
 }
 
 #home {
-    padding: 50px 300px 50px 300px;
+    padding: 50px 200px 50px 200px;
 }
 
 #me {
@@ -90,8 +90,8 @@ body {
 }
 
 #me img {
-    width: 50%;
-    border: 5px solid #034488;
+    width: 30%;
+    border: 8px solid #034488;
     border-radius: 50%;
 }
 
@@ -107,6 +107,13 @@ body {
 #bio {
     font-family: "Rubik", sans-serif;
     color: #111;
+    line-height: 25px;;
+}
+
+#bio a {
+    color: #2B97EF;
+    background-color: rgba(77,171,247,.1);
+    text-decoration: none;
 }
 
 @keyframes blink-caret {
