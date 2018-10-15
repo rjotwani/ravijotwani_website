@@ -12,7 +12,7 @@ body {
     left: 0;
     overflow-x: hidden;
     padding-top: 40px;
-    background-color: #E5EEFB;
+    background-color: #F0F7FD;
     -webkit-box-shadow: 0 0px 20px rgba(57, 63, 72, 0.3);
     -moz-box-shadow: 0 0px 20px rgba(57, 63, 72, 0.3);
     box-shadow: 0 0px 20px rgba(57, 63, 72, 0.3);
@@ -51,10 +51,12 @@ body {
 }
 
 #links {
-    padding-top: 40px;
-    color: #034488;
     text-align: center;
-    font-size: 40px;
+    position: fixed;
+    bottom: 35px;
+    color: #034488;
+    font-size: 35px;
+    width: 225px;
 }
 
 #links a {
@@ -112,8 +114,13 @@ body {
 
 #bio a {
     color: #2B97EF;
-    background-color: rgba(77,171,247,.1);
+    background-color: #F0F7FD;
     text-decoration: none;
+}
+
+#bio a:hover {
+    background-color: inherit;
+    transition: 0.2s;
 }
 
 @keyframes blink-caret {
