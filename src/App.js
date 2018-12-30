@@ -112,8 +112,7 @@ const styles = theme => ({
     color: 'rgba(255, 255, 255, 0.54)',
   },
   button: {
-    margin: theme.spacing.unit,
-    fontSize: 30,
+    fontSize: 40,
   },
 });
 
