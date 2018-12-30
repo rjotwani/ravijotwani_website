@@ -22,6 +22,17 @@
   color: #61dafb;
 }
 
+a {
+  color: #2B97EF;
+  background-color: #F0F7FD;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: inherit;
+  transition: 0.2s;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
