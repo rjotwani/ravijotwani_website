@@ -60,9 +60,8 @@ const styles = theme => ({
   tabRoot: {
     color: '#1890ff',
     textTransform: 'initial',
-    width: '100%',
+    width: 'auto',
     fontWeight: theme.typography.fontWeightRegular,
-    marginRight: theme.spacing.unit * 4,
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -92,12 +91,16 @@ const styles = theme => ({
     padding: theme.spacing.unit * 3,
   },
   card: {
-    maxWidth: 600,
     margin: 'auto',
+    maxWidth: 600,
+  },
+  projectsCard: {
+    margin: 'auto',
+    maxWidth: 800,
   },
   linkCard: {
     margin: 'auto',
-    maxWidth: 500,
+    maxWidth: 400,
   },
   media: {
     height: theme.spacing.unit * 30,
@@ -110,7 +113,7 @@ const styles = theme => ({
   },
   button: {
     margin: theme.spacing.unit,
-    fontSize: 50,
+    fontSize: 40,
   },
 });
 
@@ -134,7 +137,7 @@ class App extends Component {
           <AppBar position="static">
             <Tabs value={value} onChange={this.handleChange} centered classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}>
               <LinkTab classes={{ root: classes.tabRoot, selected: classes.tabSelected }} label="Home" href="home" />
-              <LinkTab classes={{ root: classes.tabRoot, selected: classes.tabSelected }} label="Projects" href="projects" />
+              <LinkTab classes={{ root: classes.tabRoot, selected: classes.tabSelected }} label="Projects" href="projects" id="projectsTab" />
               <LinkTab classes={{ root: classes.tabRoot, selected: classes.tabSelected }} label="Links" href="links" />
             </Tabs>
           </AppBar>
@@ -164,7 +167,7 @@ class App extends Component {
                   and delivered presentations to executives twice my age. Companies I&apos;ve started in
                   the past have gone through YCombinator&apos;s Startup School and served thousands of users.
                   Unfortunately, a lot of the work I&apos;ve done is confidential, but feel free to
-                  check out some of the projects for which I can disclose details in the <a href="#" onclick="document.getElementById('projectsTab').click()">
+                  check out some of the projects for which I can disclose details in the <a href="javascript:document.getElementById('projectsTab').click()">
                   Projects</a> tab.
                   <br/><br/>
                   I love getting to know new people, so feel free to schedule a meeting with me <a href="https://rjotwani.youcanbook.me/" target="_blank">
@@ -175,37 +178,47 @@ class App extends Component {
           </TabContainer>}
 
           {value === 1 && <TabContainer>
-            <GridList className={classes.gridList} cols={3}>
-              {tileData.map(tile => (
-                <GridListTile key={tile.img} cols={tile.cols || 1}>
-                  <img src={tile.img} alt={tile.title} />
-                  <GridListTileBar
-                    title={tile.title}
-                    subtitle={<span>by: {tile.author}</span>}
-                    actionIcon={
-                      <IconButton className={classes.icon} href={tile.href} target='_blank'>
-                        <InfoIcon />
-                      </IconButton>
-                    }
-                  />
-                </GridListTile>
-              ))}
-            </GridList>
+            <Card centered className={classes.projectsCard} >
+              <CardContent>
+                <Typography component="p">
+                  As a developer, designer, and entrepreneur, I have a large assortment of past projects.
+                  I aim to apply intelligence and creativity to everything I do, so feel free to take a
+                  look at my most noteworthy ventures listed below.
+                </Typography>
+              </CardContent>
+              <CardContent>
+                <GridList className={classes.gridList} cols={3}>
+                  {tileData.map(tile => (
+                    <GridListTile key={tile.img} cols={tile.cols || 1}>
+                      <img src={tile.img} alt={tile.title} />
+                      <GridListTileBar
+                        title={tile.title}
+                        actionIcon={(tile.href &&
+                          <IconButton className={classes.icon} href={tile.href} target='_blank'>
+                            <InfoIcon />
+                          </IconButton>) || null
+                        }
+                      />
+                    </GridListTile>
+                  ))}
+                </GridList>
+              </CardContent>
+            </Card>
           </TabContainer>}
 
           {value === 2 && <TabContainer>
             <Card centered className={classes.linkCard} >
               <Grid container justify = "center">
-                <Button className={classes.button} href='#' target='_blank' >
+                <Button className={classes.button} href='mailto:rjotwani@berkeley.edu' target='_blank' >
                   <FontAwesomeIcon icon={['far', 'envelope']} color='#dd4b39' />
                 </Button>
-                <Button className={classes.button} href='#' target='_blank' >
+                <Button className={classes.button} href='https://www.linkedin.com/in/ravijotwani/' target='_blank' >
                   <FontAwesomeIcon icon={['fab', 'linkedin']} color='#0077B5' />
                 </Button>
-                <Button className={classes.button} href='#' target='_blank' >
+                <Button className={classes.button} href='https://github.com/rjotwani/' target='_blank' >
                   <FontAwesomeIcon icon={['fab', 'github']} color='#333' />
                 </Button>
-                <Button className={classes.button} href='#' target='_blank' >
+                <Button className={classes.button} href='./files/resume.pdf' target='_blank' >
                   <FontAwesomeIcon icon={['far', 'file']} color='#a1a0a5' />
                 </Button>
               </Grid>
