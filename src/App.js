@@ -24,10 +24,10 @@ import MailIcon from '@material-ui/icons/Mail';
 import tileData from './tileData';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faFile } from '@fortawesome/free-regular-svg-icons'
+import { faEnvelope, faFileAlt } from '@fortawesome/free-regular-svg-icons'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faEnvelope, faFile, faLinkedin, faGithub)
+library.add(faEnvelope, faFileAlt, faLinkedin, faGithub)
 
 function TabContainer(props) {
   return (
@@ -219,7 +219,7 @@ class App extends Component {
                   <FontAwesomeIcon icon={['fab', 'github']} color='#333' />
                 </Button>
                 <Button className={classes.button} href='./files/resume.pdf' target='_blank' >
-                  <FontAwesomeIcon icon={['far', 'file']} color='#a1a0a5' />
+                  <FontAwesomeIcon icon={['far', 'file-alt']} color='#a1a0a5' />
                 </Button>
               </Grid>
             </Card>
