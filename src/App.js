@@ -113,7 +113,7 @@ const styles = theme => ({
   },
   button: {
     margin: theme.spacing.unit,
-    fontSize: 40,
+    fontSize: 30,
   },
 });
 
